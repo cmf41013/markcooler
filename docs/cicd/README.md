@@ -15,6 +15,7 @@
 |---|---|
 | [setup-record.md](setup-record.md) | **完整实操记录**：每一步谁做了什么、用了什么命令、得到什么结果 |
 | [github-actions.md](github-actions.md) | GitHub Actions 核心概念 + `ci.yml` 逐行解析 |
+| [pull-request.md](pull-request.md) | PR 流程与「Compare & pull request」按钮说明 |
 
 ## 当前成果快照
 
