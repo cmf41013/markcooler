@@ -2,7 +2,10 @@ import fastifyStatic from '@fastify/static';
 import Fastify, { type FastifyInstance } from 'fastify';
 import { existsSync } from 'node:fs';
 import type { ServerConfig } from './config.ts';
+import { registerFileRoutes } from './routes/files.ts';
+import { registerHistoryRoutes } from './routes/history.ts';
 import { registerMetaRoutes } from './routes/meta.ts';
+import { HistoryStore } from './services/historyStore.ts';
 
 /**
  * 构建 Fastify 实例（不监听端口，便于测试注入）。
@@ -25,7 +28,12 @@ export async function buildApp(config: ServerConfig): Promise<FastifyInstance> {
     });
   }
 
+  const history = new HistoryStore(config.historyFile);
+  await history.load();
+
   registerMetaRoutes(app, config);
+  registerFileRoutes(app, config);
+  registerHistoryRoutes(app, config, history);
 
   return app;
 }

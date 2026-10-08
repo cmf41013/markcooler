@@ -1,4 +1,5 @@
 import { readFileSync } from 'node:fs';
+import { homedir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -20,6 +21,8 @@ export interface ServerConfig {
   open: boolean;
   /** web 构建产物目录（不存在则跳过静态托管）。 */
   webDist: string;
+  /** 打开历史记录文件路径。 */
+  historyFile: string;
 }
 
 // 本文件位于 apps/server/src/，据此定位 web 构建产物与 package.json
@@ -41,5 +44,7 @@ export function resolveConfig(options: CliOptions): ServerConfig {
     root: path.resolve(options.dir ?? process.cwd()),
     open: options.open,
     webDist: path.resolve(HERE, '../../web/dist'),
+    historyFile:
+      process.env.MARKCOOLER_HISTORY_FILE ?? path.join(homedir(), '.markcooler', 'history.json'),
   };
 }
