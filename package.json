@@ -22,7 +22,7 @@
     "build": "pnpm -r --if-present build",
     "serve": "pnpm --filter @markcooler/server start",
     "lint": "eslint .",
-    "typecheck": "pnpm -r --if-present typecheck",
+    "typecheck": "pnpm --filter @markcooler/shared build && pnpm -r --if-present typecheck",
     "test": "pnpm --filter @markcooler/shared build && pnpm -r --if-present test",
     "e2e": "pnpm --filter @markcooler/e2e e2e",
     "format": "prettier --write .",
