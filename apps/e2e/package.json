@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "test": "pnpm --filter @markcooler/shared build && pnpm --filter @markcooler/web build && playwright test"
+    "e2e": "pnpm --filter @markcooler/shared build && pnpm --filter @markcooler/web build && playwright test"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0"

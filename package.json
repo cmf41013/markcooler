@@ -20,11 +20,11 @@
   "scripts": {
     "dev": "pnpm --filter @markcooler/web dev",
     "build": "pnpm -r --if-present build",
-    "serve": "pnpm --filter @markcooler/server serve",
+    "serve": "pnpm --filter @markcooler/server start",
     "lint": "eslint .",
     "typecheck": "pnpm -r --if-present typecheck",
-    "test": "pnpm -r --if-present test",
-    "e2e": "pnpm --filter @markcooler/e2e test",
+    "test": "pnpm --filter @markcooler/shared build && pnpm -r --if-present test",
+    "e2e": "pnpm --filter @markcooler/e2e e2e",
     "format": "prettier --write .",
     "prepare": "husky"
   },
