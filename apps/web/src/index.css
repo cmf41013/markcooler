@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* rehype-highlight 使用 github.css 主题；深色模式下手动覆盖代码块背景与基色 */
+.dark .hljs {
+  color: #e6edf3;
+  background: #161b22;
+}

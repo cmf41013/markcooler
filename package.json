@@ -20,11 +20,11 @@
   "scripts": {
     "dev": "pnpm --filter @markcooler/web dev",
     "build": "pnpm -r --if-present build",
-    "serve": "pnpm --filter @markcooler/server serve",
+    "serve": "pnpm --filter @markcooler/server start",
     "lint": "eslint .",
-    "typecheck": "pnpm -r --if-present typecheck",
-    "test": "pnpm -r --if-present test",
-    "e2e": "pnpm --filter @markcooler/e2e test",
+    "typecheck": "pnpm --filter @markcooler/shared build && pnpm -r --if-present typecheck",
+    "test": "pnpm --filter @markcooler/shared build && pnpm -r --if-present test",
+    "e2e": "pnpm --filter @markcooler/e2e e2e",
     "format": "prettier --write .",
     "prepare": "husky"
   },
@@ -39,7 +39,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^17.6.0",
     "prettier": "^3.9.9",
-    "typescript": "^6.0.3",
+    "typescript": "~6.0.3",
     "typescript-eslint": "^8.71.0"
   }
 }
