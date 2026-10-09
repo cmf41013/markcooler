@@ -12,8 +12,8 @@
 | M4 | 文件 API + 历史：递归列目录、路径穿越防护、historyStore | ⏳ 进行中 |
 | M5 | web 数据与渲染：文件列表 / 渲染 / 历史 / 拖拽 | ⬜ 待做 |
 | M6 | 单元与组件测试：Vitest + RTL + MSW | ⬜ 待做 |
-| M7 | E2E 测试：Playwright（server / file 双模式） | ⬜ 待做 |
-| M8 | CI/CD 完整化 + 文档 | ⬜ 待做 |
+| M7 | E2E 测试：Playwright（server / file 双模式） | ✅ 已完成 |
+| M8 | CI/CD 完整化 + 文档 | ⏳ 进行中 |
 
 ## 相关文档
 
