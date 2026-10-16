@@ -74,7 +74,7 @@ importers:
         version: 6.0.3
       vitest:
         specifier: ^5.0.3
-        version: 5.0.3(@types/node@26.6.4)(@vitest/coverage-v8@5.0.3)(jsdom@30.1.2)(msw@3.0.2(@types/node@26.6.4)(typescript@6.0.3)(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1)))(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1))
+        version: 5.0.3(@types/node@26.6.4)(@vitest/coverage-v8@5.0.3)(jsdom@30.1.2)(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1))
 
   apps/web:
     dependencies:
@@ -143,8 +143,8 @@ importers:
         specifier: ^6.1.2
         version: 6.1.2(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1))
       '@vitest/coverage-v8':
-        specifier: ^5.0.3
-        version: 5.0.3(vitest@5.0.3)
+        specifier: ^5.0.4
+        version: 5.0.4(vitest@5.0.3)
       jsdom:
         specifier: ^30.1.2
         version: 30.1.2
@@ -162,7 +162,7 @@ importers:
         version: 2.3.3(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1))
       vitest:
         specifier: ^5.0.3
-        version: 5.0.3(@types/node@26.6.4)(@vitest/coverage-v8@5.0.3)(jsdom@30.1.2)(msw@3.0.2(@types/node@26.6.4)(typescript@6.0.3)(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1)))(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1))
+        version: 5.0.3(@types/node@26.6.4)(@vitest/coverage-v8@5.0.4)(jsdom@30.1.2)(msw@3.0.2(@types/node@26.6.4)(typescript@6.0.3)(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1)))(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1))
 
   packages/shared:
     devDependencies:
@@ -1235,6 +1235,15 @@ packages:
     peerDependencies:
       '@vitest/browser': 5.0.3
       vitest: 5.0.3
+    peerDependenciesMeta:
+      '@vitest/browser':
+        optional: true
+
+  '@vitest/coverage-v8@5.0.4':
+    resolution: {integrity: sha512-P5YcQY8Y6RmoE9xRXI38rT8pssbcubEzqtYTM2XQoxOXMDn04nRaTI1SM8qCl9/NfW3ag9GlzdSXu7IwO5Ft8A==}
+    peerDependencies:
+      '@vitest/browser': 5.0.4
+      vitest: 5.0.4
     peerDependenciesMeta:
       '@vitest/browser':
         optional: true
@@ -2324,6 +2333,10 @@ packages:
 
   obug@2.2.1:
     resolution: {integrity: sha512-XrsrhT5sybtKI6wakr2SPOlGZWWYbUXZ7a0jT8/QOeAPau+1X/bSegNe5YR75oJmEZQbKningirmGOEJCIk61Q==}
+    engines: {node: '>=12.20.0'}
+
+  obug@3.0.0:
+    resolution: {integrity: sha512-5vvB5+W7ePv+p3uqxi+RcW1XAzLW0/hxt3/4X4Lc4qHudzOhmBiBwOY6DRob4WnanAEGvNcLjF+KNOufrUoEQw==}
     engines: {node: '>=12.20.0'}
 
   on-exit-leak-free@2.1.2:
@@ -3846,7 +3859,7 @@ snapshots:
       picocolors: 1.1.1
       redent: 3.0.0
     optionalDependencies:
-      vitest: 5.0.3(@types/node@26.6.4)(@vitest/coverage-v8@5.0.3)(jsdom@30.1.2)(msw@3.0.2(@types/node@26.6.4)(typescript@6.0.3)(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1)))(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1))
+      vitest: 5.0.3(@types/node@26.6.4)(@vitest/coverage-v8@5.0.4)(jsdom@30.1.2)(msw@3.0.2(@types/node@26.6.4)(typescript@6.0.3)(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1)))(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1))
 
   '@testing-library/react@16.3.3(@testing-library/dom@10.4.2)(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
@@ -4023,7 +4036,20 @@ snapshots:
       obug: 2.2.1
       std-env: 4.3.0
       tinyrainbow: 3.2.0
-      vitest: 5.0.3(@types/node@26.6.4)(@vitest/coverage-v8@5.0.3)(jsdom@30.1.2)(msw@3.0.2(@types/node@26.6.4)(typescript@6.0.3)(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1)))(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1))
+      vitest: 5.0.3(@types/node@26.6.4)(@vitest/coverage-v8@5.0.3)(jsdom@30.1.2)(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1))
+    optional: true
+
+  '@vitest/coverage-v8@5.0.4(vitest@5.0.3)':
+    dependencies:
+      '@bcoe/v8-coverage': 1.0.2
+      '@vitest/istanbul-lib-coverage': 1.0.2
+      '@vitest/istanbul-lib-report': 1.0.2
+      ast-v8-to-istanbul: 1.0.7
+      magicast: 0.5.5
+      obug: 3.0.0
+      std-env: 4.3.0
+      tinyrainbow: 3.2.0
+      vitest: 5.0.3(@types/node@26.6.4)(@vitest/coverage-v8@5.0.4)(jsdom@30.1.2)(msw@3.0.2(@types/node@26.6.4)(typescript@6.0.3)(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1)))(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1))
 
   '@vitest/istanbul-lib-coverage@1.0.2': {}
 
@@ -5244,6 +5270,8 @@ snapshots:
 
   obug@2.2.1: {}
 
+  obug@3.0.0: {}
+
   on-exit-leak-free@2.1.2: {}
 
   optionator@0.9.4:
@@ -5759,7 +5787,7 @@ snapshots:
       jiti: 2.7.0
       yaml: 2.9.1
 
-  vitest@5.0.3(@types/node@26.6.4)(@vitest/coverage-v8@5.0.3)(jsdom@30.1.2)(msw@3.0.2(@types/node@26.6.4)(typescript@6.0.3)(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1)))(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1)):
+  vitest@5.0.3(@types/node@26.6.4)(@vitest/coverage-v8@5.0.3)(jsdom@30.1.2)(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1)):
     dependencies:
       '@types/chai': 5.2.3
       '@vitest/mocker': 5.0.3(msw@3.0.2(@types/node@26.6.4)(typescript@6.0.3)(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1)))(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1))
@@ -5778,6 +5806,29 @@ snapshots:
     optionalDependencies:
       '@types/node': 26.6.4
       '@vitest/coverage-v8': 5.0.3(vitest@5.0.3)
+      jsdom: 30.1.2
+    transitivePeerDependencies:
+      - msw
+
+  vitest@5.0.3(@types/node@26.6.4)(@vitest/coverage-v8@5.0.4)(jsdom@30.1.2)(msw@3.0.2(@types/node@26.6.4)(typescript@6.0.3)(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1)))(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1)):
+    dependencies:
+      '@types/chai': 5.2.3
+      '@vitest/mocker': 5.0.3(msw@3.0.2(@types/node@26.6.4)(typescript@6.0.3)(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1)))(vite@8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1))
+      chai: 6.3.0
+      es-module-lexer: 2.3.2
+      expect-type: 1.4.0
+      magic-string: 1.4.3
+      obug: 2.2.1
+      picomatch: 4.0.7
+      std-env: 4.3.0
+      tinybench: 6.2.1
+      tinyexec: 1.3.1
+      tinyglobby: 0.2.17
+      vite: 8.3.3(@types/node@26.6.4)(jiti@2.7.0)(yaml@2.9.1)
+      why-is-node-running: 3.2.1
+    optionalDependencies:
+      '@types/node': 26.6.4
+      '@vitest/coverage-v8': 5.0.4(vitest@5.0.3)
       jsdom: 30.1.2
     transitivePeerDependencies:
       - msw
